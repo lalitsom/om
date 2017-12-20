@@ -1,5 +1,7 @@
 counter = 0;
-function change(){
-  document.getElementById('text').innerHTML = counter;
+vc = 0;
+function change(v){
+
+  document.getElementById('text').innerHTML = v.code;
   counter++;
 }
