@@ -4,18 +4,28 @@ play = true
 playtrack = null;
 
 function controls(v) {
-  if (v.code == 'Digit5') {
+  if (v.code == 'Digit5' || v.code=="KeyW") {
     play = !play;
     todaysong();
-  } else if (v.code == 'Digit6') {
-    //seek 1+ seconds
-  } else if (v.code == 'Digit4') {
-    //seek 1- seconds
+  } else if (v.code == 'Digit6'  || v.code=="KeyE") {
+    seek(6)
+  } else if (v.code == 'Digit4'  || v.code=="KeyQ") {
+    seek(-6)
   }
-  counter++;
+  else if (v.code == 'Digit8'  || v.code=="KeyS") {
+    playtrack.currentTime = playtrack.duration/2;
+  }
+  else if (v.code == 'Digit7'  || v.code=="KeyA") {
+    playtrack.currentTime = 0;
+  }
+  else if (v.code == 'Digit9'  || v.code=="KeyD") {
+    playtrack.currentTime = playtrack.duration - 20;
+  }
 }
 
-
+function seek(val){
+  playtrack.currentTime += val;
+}
 
 function todaysong() {
   if (!playtrack) {
