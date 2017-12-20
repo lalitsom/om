@@ -4,7 +4,7 @@ play = true
 playtrack = null;
 
 function controls(v) {
-  if (v.code == 'Digit5' && play) {
+  if (v.code == 'Digit5') {
     play = !play;
     todaysong();
   } else if (v.code == 'Digit6') {
