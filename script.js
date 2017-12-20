@@ -3,7 +3,7 @@ vc = 0;
 play = true
 playtrack = null;
 
-function change(v) {
+function controls(v) {
   if (v.code == 'Digit5' && play) {
     play = !play;
     todaysong();
@@ -12,9 +12,10 @@ function change(v) {
   } else if (v.code == 'Digit4') {
     //seek 1- seconds
   }
-
   counter++;
 }
+
+
 
 function todaysong() {
   if (!playtrack) {
@@ -40,3 +41,12 @@ function getTodaySrc(){
   year = today.getFullYear();
   return baseSrc + String(date) + "." + String(month) + "." + String(year).substr(2,2) + suffix;
 }
+
+function IncCounter(){
+counter = parseInt(playtrack.currentTime)
+duration = playtrack.duration
+document.getElementById('text').innerHTML = counter;
+}
+
+todaysong();
+setInterval(IncCounter,1000);
