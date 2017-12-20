@@ -49,6 +49,15 @@ function getTodaySrc(){
   date = today.getDate();
   month = today.getMonth() + 1;
   year = today.getFullYear();
+
+  if(date.length == 1){
+    date = "0"+String(date);
+  }
+  if(month.length == 1){
+    month = "0"+String(month);
+  }
+
+
   return baseSrc + String(date) + "." + String(month) + "." + String(year).substr(2,2) + suffix;
 }
 
