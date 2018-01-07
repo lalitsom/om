@@ -50,10 +50,12 @@ function getTodaySrc(){
   month = today.getMonth() + 1;
   year = today.getFullYear();
 
-  if(date.length == 1){
+  if(date.toString().length == 1){
+
     date = "0"+String(date);
+
   }
-  if(month.length == 1){
+  if(month.toString().length == 1){
     month = "0"+String(month);
   }
 
