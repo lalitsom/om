@@ -43,8 +43,11 @@ function todaysong() {
 }
 
 function getTodaySrc(){
-  baseSrc = "http://www.babamurli.com/01.%20Daily%20Murli/01.%20Hindi/03.%20Hindi%20Murli%20-%20MP3/";
-  suffix = "-H.mp3";
+//   baseSrc = "http://www.babamurli.com/01.%20Daily%20Murli/01.%20Hindi/03.%20Hindi%20Murli%20-%20MP3/";
+  baseSrc = "http://www.babamurli.com/01.%20Daily%20Murli/01.%20Hindi/10.%20Hindi%20Murli%20-%20Mumbai/";
+  
+//   suffix = "-H.mp3";
+  suffix = ".mp3";
   var today = new Date();
   date = today.getDate();
   month = today.getMonth() + 1;
